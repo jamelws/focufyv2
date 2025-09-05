@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/app/*": ["./src/app/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/lib/*": ["./src/lib/*"],
+      "@/styles/*": ["./src/styles/*"],
+      "@/locales/*": ["./src/locales/*"],
+      "@/pages/*": ["./src/pages/*"],
+      "@/utils/*": ["./utils/*"]
+    },
+    "allowJs": true,
+    "checkJs": false,
+    "jsx": "react-jsx",
+    "module": "esnext",                 // 👈 añade esto
+    "moduleResolution": "bundler",      // OK con TS 5+ y module esnext/preserve/es2015+
+    "noEmit": true
+  },
+  "include": [
+    "src/**/*",
+    "next-env.d.ts",
+    "next-env.d.js",
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.cjs",
+    "**/*.mjs"
+  ],
+  "exclude": ["node_modules", ".next", "dist", "build", ".turbo"]
+}
