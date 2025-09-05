@@ -1,0 +1,280 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* variables base (modo claro) */
+:root {
+  /* neutrales */
+  --background: 0 0% 100%;
+  --foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+
+  /* tu color de marca como PRIMARY (#6607a8 ≈ hsl(275 92% 34%)) */
+  --primary: 275 92% 34%;
+  --primary-foreground: 0 0% 100%;
+
+  /* secundarios (ajústalos si quieres) */
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+
+  /* acentos / estado */
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+
+  /* inputs/bordes/anillos */
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 275 92% 34%;
+
+  /* superficies */
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 47.4% 11.2%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 47.4% 11.2%;
+
+  /* radios (shadcn) */
+  --radius: 0.5rem;
+}
+
+/* modo oscuro (opcional) */
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+
+  --primary: 275 92% 45%;
+  --primary-foreground: 0 0% 98%;
+
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
+
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 85.7% 97.3%;
+
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 275 92% 45%;
+
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+}
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+.bg-dark {
+  background-color: rgba(0, 0, 0, 0.85); /* o el color que quieras */
+  transition: background-color 0.3s ease;
+}
+.bg-purple{
+  background-color: #6C2BD9 !important; 
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f5f5;
+  color: #111;
+}
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1{
+  font-size: 50px;
+  line-height: 60px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.container{
+  max-width: 1300px;
+  width: 100%;
+  margin:auto;
+  padding: 0px 20px;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.card{
+  flex: 0 0 calc(33.333% - 20px);
+  max-width: calc(33.333% - 20px);
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 2px solid transparent;
+}
+.card:hover {
+  border-color: #6607a8;
+}
+.btn{
+  border: none;
+  outline: none;
+  background: #6607a8;
+  color: #fff;
+  border-radius: 10px;
+  max-width: 120px; 
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  
+  transition: .3s;
+  border: 1px solid #6607a8;
+}
+.btn:hover {  
+  transform: scale(1.05);
+  background: transparent;
+  color: #520587;
+}
+.btn-danger {
+  background: #dc3545;
+  color: #fff;
+}
+.btn-danger:hover {
+  border-color: #dc3545;
+  color: #dc3545;
+}
+label{
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+}
+@media (max-width: 969px) {
+  section {
+    padding: 20px 0px;
+  }
+  h1{
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .cards {
+    flex: 0 0 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+@media (max-width: 600px) {
+  
+  .cards {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+.MuiAppBar-root {
+  background-color: #6607a8 !important;
+}
+
+/* Bootstrap overrides */
+.btn-primary {
+  background-color: #6607a8;
+  border-color: #6607a8;
+}
+
+.btn-primary:hover {
+  background-color: #520587;
+  border-color: #520587;
+}
+.css-3hpdci-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed,
+.css-3hpdci-MuiSvgIcon-root-MuiStepIcon-root.Mui-active {
+  color: #6607a8 !important;
+}
+.css-a2nqx7-MuiButtonBase-root-MuiButton-root,
+.css-p6fm8p-MuiButtonBase-root-MuiButton-root {
+  color: white;
+  background-color: #6607a8 !important;
+  
+}
+.css-7uz52k{
+  margin-left: 10px !important;
+}
+.css-1anpxs9-MuiPaper-root-MuiCard-root{  
+  border-color: #6607a8 !important;
+  color: #6607a8 !important;
+}
+.css-74d805-MuiButtonBase-root-MuiButton-root{
+  background-color: #6607a8 !important;
+}
+.css-l16vtb-MuiLinearProgress-bar1 {
+  background-color: #6607a8 !important;
+}
+.css-1txyin7-MuiLinearProgress-root{
+  background-color:#e0bdfa !important;
+}
+.css-1xcmt9q-MuiSlider-thumb {
+  background-color: #6607a8 !important;
+}
+.css-jhniim-MuiSlider-root {
+  color: #e0bdfa !important;
+}
+.css-1me1p9b-MuiPaper-root-MuiCard-root{
+  color: #6607a8 !important;
+}
+.css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input:focus{
+  border-color: #6607a8 !important;
+}
+.css-1pg1r4r-MuiButtonBase-root-MuiMenuItem-root.Mui-selected{
+  background-color: #6607a8 !important;
+}
+.MuiList-root{
+  font-weight: 700 !important;
+}
+.MuiTypography-root{
+  font-weight: 700 !important;
+}
+.css-1yrruqc-MuiLinearProgress-root{
+  background-color: #bc95d8 !important;
+}
+.pequeno {
+  font-size: 14px;
+}
+.MuiButton-outlinedPrimary{
+  background-color: #fff !important;
+  border-color: #6607a8 !important;
+  color: #6607a8 !important;
+}
+.MuiButton-containedPrimary{
+  background-color: #6607a8 !important;
+}
+.Mui-checked, Checkbox{
+  color: #6607a8 !important;
+}
+.text-purple,.text-purple-400{
+  font-family: "madefor-display" !important;
+  font-weight: 400;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  color: #6C2BD9 !important;
+}
+.text-black-700{
+  font-family: "madefor-display" !important;
+  font-weight: 700;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  color: #000 !important;
+}
+.text-purple:hover{
+  color: #bbb2b2 !important;   
+}
+.text-lg{
+  color: #000000 !important;
+}
