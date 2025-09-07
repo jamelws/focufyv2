@@ -1,7 +1,7 @@
 // /app/api/artist/song/top/route.js
 import { NextResponse } from "next/server";
-import { PrismaClient } from "@prisma/client";
 import { getServerSession } from "next-auth";
+import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
