@@ -49,7 +49,7 @@ export default function Sidebar() {
 
     return items;
   };
-
+  if(!session) return null;
   return (
     <aside className="w-64 bg-gray-100 p-4">
       <div style={{ height: 50, width: "100%" }}></div>
