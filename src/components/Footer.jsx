@@ -13,7 +13,7 @@ export default function Footer() {
     return (
         <footer className="footer">
             <div className="newsletter">
-                <Image src="/focu_whitw_02.png" alt="Focufy" width={140} height={50} />
+                <Image src="/focu_whitw_02.png" alt="Focufy" width={140} height={50} priority />
             </div>
             <div className="footer-columns">
                 <div className="footer-column">

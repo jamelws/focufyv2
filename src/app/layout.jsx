@@ -2,6 +2,9 @@
 import Providers from "@/components/Providers"; 
 
 import "./globals.css";
+import "../../public/styles/globals.css";
+import "../../public/styles/landing.css";
+import "../../public/styles/quiz.css";
 
 export const metadata = {
   title: "Focufy",
@@ -10,12 +13,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es">
-      <head>
-        <link rel="stylesheet" href="/styles/globals.css" />
-        <link rel="stylesheet" href="/styles/landing.css" />
-        <link rel="stylesheet" href="/styles/quiz.css" />
-      </head>
+    <html lang="es">      
       <body>
         <Providers>{children}</Providers>
       </body>

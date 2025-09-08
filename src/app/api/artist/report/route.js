@@ -1,13 +1,21 @@
 import { NextResponse } from "next/server";
 import { PrismaClient } from "@prisma/client";
-const prisma = new PrismaClient();
-
+import prisma from "@/lib/prisma";
+import { authOptions } from "@/lib/auth";
 export async function GET() {
   try {
+    const session = await getServerSession(authOptions);
+    if (!session?.user?.id) {
+      return NextResponse.json({ error: "No autorizado" }, { status: 401 });
+    }
+    const artistId = session.user.id;
+
     const musicSets = await prisma.musicSet.findMany({
       where: {
+        artistId: artistId,
+        // Filtramos para incluir solo sets que han sido compartidos
         tokens: {
-          some: {}, // al menos un token
+          some: {}, // 'some: {}' significa que debe tener al menos un registro relacionado
         },
       },
       select: {

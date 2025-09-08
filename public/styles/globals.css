@@ -1,0 +1,28 @@
+/* Contenido de tu archivo globalsstyles.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    /* ... (resto de tus variables de color) ... */
+    --primary-color: #6C2BD9;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+.bg-primary {
+  background-color: var(--primary-color) !important; 
+}
+.strong{
+  font-weight: 700 !important;
+}

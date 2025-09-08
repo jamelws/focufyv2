@@ -65,9 +65,10 @@ export default function SignInForm() {
   // Login normal
   async function onSubmit(values) {
     const res = await signIn("credentials", {
-      redirect: false,
+      redirect: true,
       email: values.email,
       password: values.password,
+      callbackUrl: "/dashboard",
     });
 
     if (res.error) {

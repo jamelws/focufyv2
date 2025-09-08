@@ -37,7 +37,6 @@ import RankingCard from "@/components/RankingCard";
 import MusicPlayer from "@/components/MusicPlayer";
 import { useSession } from "next-auth/react";
 
-import "@/styles/quiz.css";
 import i18n from "@/lib/i18n";
 
 export default function EvaluateClient({ data }) {
@@ -432,7 +431,7 @@ export default function EvaluateClient({ data }) {
         <Typography variant="body1">✨ {t("finish6")}</Typography>
 
         <Box mt={4}>
-          <Button variant="contained" size="large" onClick={() => router.push("/listener/my-music")}>
+          <Button variant="contained" size="large" onClick={() => router.push("/dashboard/listener/my-music")}>
             {t("btnfinish")}
           </Button>
         </Box>

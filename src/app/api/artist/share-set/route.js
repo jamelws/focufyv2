@@ -1,7 +1,7 @@
 // app/api/share/route.js
 import { PrismaClient } from '@prisma/client';
 import { getServerSession } from 'next-auth';
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { authOptions } from "@/lib/auth";
 import crypto from 'crypto';
 
 const prisma = new PrismaClient();
@@ -62,7 +62,7 @@ export async function POST(req) {
             aprovado: true
           }
         });
-        links.push({ recipient: m.correo || m.userId, url: `/listener/evaluate/${token}` });
+        links.push({ recipient: m.correo || m.userId, url: `/dashboard/listener/evaluate/${token}` });
 
       }
     }
@@ -87,7 +87,7 @@ export async function POST(req) {
             aprovado: true
           }
         });
-        links.push({ recipient: uid, url: `/listener/evaluate/${token}` });
+        links.push({ recipient: uid, url: `/dashboard/listener/evaluate/${token}` });
       }
     }
 
@@ -105,7 +105,7 @@ export async function POST(req) {
             active: true
           }
         });
-        links.push({ recipient: email, url: `/listener/evaluate/${token}` });
+        links.push({ recipient: email, url: `/dashboard/listener/evaluate/${token}` });
       }
     }
 
@@ -122,7 +122,7 @@ export async function POST(req) {
           // opcional: isPublic: true
         }
       });
-      links.push({ recipient: 'public', url: `/listener/evaluate/${token}` });
+      links.push({ recipient: 'public', url: `/dashboard/listener/evaluate/${token}` });
     }
 
     return new Response(JSON.stringify({ message: 'Set compartido con éxito', links }), { status: 200 });

@@ -275,7 +275,6 @@
   "shareset":"Compartir Set",
   "sartdate":"Fecha inicial",
   "enddate":"Fecha final",
-
   "savedprof":"Perfil guardado con éxito",
   "profiletitle":"Editar Perfil",
   "profpers":"Personal",
@@ -288,5 +287,18 @@
   "sitelbl":"Sitio Web",
   "contactmaillbl":"Email de Contacto",
   "availlbl":"Disponible para colaboraciones",
-  "savechanges":"Guardar Cambios"
+  "savechanges":"Guardar Cambios",
+  "email": "Correo electrónico",
+  "password": "Contraseña",
+  "enterPassword": "Ingresa tu contraseña",
+  "signin": "Iniciar sesión",
+  "signup": "Regístrate",
+  "or": "o",
+  "noAccount": "Si no tienes una cuenta, por favor",
+  "invalidCreds": "Credenciales incorrectas",
+  "forgotPassword": "¿Olvidaste tu contraseña?",
+  "resetPassword": "Restablecer contraseña",
+  "sendLink": "Enviar enlace",
+  "resetLinkSent": "Se ha enviado un enlace de restablecimiento a tu correo",
+  "err_load_projects":"No hay Sets compartidos aun"
 }

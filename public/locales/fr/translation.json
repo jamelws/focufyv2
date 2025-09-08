@@ -287,5 +287,18 @@
   "sitelbl": "Site Web",
   "contactmaillbl": "Email de contact",
   "availlbl": "Disponible pour des collaborations",
-  "savechanges": "Enregistrer les modifications"
+  "savechanges": "Enregistrer les modifications",
+  "email": "E-mail",
+  "password": "Mot de passe",
+  "enterPassword": "Entrez votre mot de passe",
+  "signin": "Se connecter",
+  "signup": "S'inscrire",
+  "or": "ou",
+  "noAccount": "Si vous n'avez pas de compte, veuillez",
+  "invalidCreds": "Identifiants invalides",
+  "forgotPassword": "Mot de passe oublié ?",
+  "resetPassword": "Réinitialiser le mot de passe",
+  "sendLink": "Envoyer le lien",
+  "resetLinkSent": "Un lien de réinitialisation a été envoyé à votre e-mail",
+  "err_load_projects":"Pas encore de Sets partagés"
 }

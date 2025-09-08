@@ -287,5 +287,18 @@
   "sitelbl": "Website",
   "contactmaillbl": "Contact Email",
   "availlbl": "Available for collaborations",
-  "savechanges": "Save Changes"
+  "savechanges": "Save Changes",
+  "email": "Email",
+  "password": "Password",
+  "enterPassword": "Enter your password",
+  "signin": "Sign in",
+  "signup": "Sign up",
+  "or": "or",
+  "noAccount": "If you don't have an account, please",
+  "invalidCreds": "Invalid credentials",
+  "forgotPassword": "Forgot your password?",
+  "resetPassword": "Reset password",
+  "sendLink": "Send link",
+  "resetLinkSent": "A reset link has been sent to your email",
+  "err_load_projects":"No shared Sets yet"
 }
